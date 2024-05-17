@@ -41,30 +41,64 @@ O CRUD é implementado nas classes do controlador, modelo e repositório:
 O projeto pode ser testado localmente utilizando o curl, exemplos:
 
 ### Create new tutorials
+```
 curl -X POST -H "Content-Type: application/json" -d '{"title":"Spring Boot Basics","description":"Introduction to Spring Boot.","published":true}' http://localhost:8080/api/tutorials
+```
+```
 curl -X POST -H "Content-Type: application/json" -d '{"title":"ReactJS Basics","description":"Getting started with React.","published":true}' http://localhost:8080/api/tutorials
+```
+```
 curl -X POST -H "Content-Type: application/json" -d '{"title":"Spring Security","description":"Securing your Spring applications.","published":false}' http://localhost:8080/api/tutorials
+```
 
 ### Get all tutorials
+
+```
 curl -X GET http://localhost:8080/api/tutorials
+```
 
 ### Get tutorials by ID
+
+```
 curl -X GET http://localhost:8080/api/tutorials/1
+```
+```
 curl -X GET http://localhost:8080/api/tutorials/2
+```
 
 ### Get tutorials by published status
+
+```
 curl -X GET http://localhost:8080/api/tutorials/published
+```
 
 ### Update a tutorial by ID
+```
 curl -X PUT -H "Content-Type: application/json" -d '{"title":"Spring Boot Basics Updated","description":"Introduction to Spring Boot. Updated description.","published":true}' http://localhost:8080/api/tutorials/1
+```
+```
 curl -X PUT -H "Content-Type: application/json" -d '{"title":"ReactJS Basics Updated","description":"Getting started with React. Updated description.","published":true}' http://localhost:8080/api/tutorials/2
+```
 
 ### Delete a tutorial by ID
+```
 curl -X DELETE http://localhost:8080/api/tutorials/1
+```
+```
 curl -X DELETE http://localhost:8080/api/tutorials/2
+```
 
 ### Delete all tutorials
+```
 curl -X DELETE http://localhost:8080/api/tutorials
+```
+
+## Instalação
+
+Clone esse repositório, e certifique-se de atualizar as configurações de acesso ao banco em
+src/main/resources/application.properties
+(exemplo em src/main/resources/application.properties.example).
+
 
 
 ## Considerações Finais
